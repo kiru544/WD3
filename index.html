@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Input form</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+    <div id="page">
+        <header>
+            <img alt="logo" src="images/logo.svg">
+            <a class="logo" href="#"><span>Website that have a Form </span></a>
+            <a class="logo2"  href="#"><span>a</span></a>
+        </header>
+        <h1>Input form</h1>
+        <section id="help">
+        <a id="help-link">Show help:</a>
+        <div id="help-video"></div>
+        </section>
+        <form id="questions" method="post" action="#">
+                <section>
+                <div class="error">only 2 letters please</div>
+                <input type="text" id="Fname" placeholder="Your first 2 letter of your name" pattern="[a-z]{2}"required>
+                <div class="error">only 2 letters please</div>
+                <label for="Fname">First Name:</label> 
+                <div class="nameicon"></div>
+            </section>
+            <section>
+            <input type="text" id="Mname"  placeholder="Your middle name">
+            <label id="Mname">Middle Name:</label>
+            <div class="nameicon"></div>
+            </section>
+            
+            <section>
+        <input type="text" id="Lname" placeholder="Your first 2 letter of your last name"pattern="[a-z]{2}"required>
+        <label for="Lname">Last Name:</label>
+        <div class="error">only 2 letters please!</div>
+        <div class="nameicon"></div>
+            </section>
+            <section>
+        <input type="date" id="dob" class="dob" min="1900-01-01" max="2003-12-31" >
+        <label for="dob">D.O.B(18+)</label>
+        <div class="error">you shouldn't born before 1900-01-01 and after 2003-12-31(18+)</div>
+        <div class="dateicon"></div>
+            </section>
+
+        <fieldset>
+            <legend>What is your gender</legend>
+                <input type="radio" name="gender" value="male" id="male"><label for="male">male</label>
+                <input type="radio" name="gender" value="female" id="female"><label for="female">female</label>
+                <input type="radio" name="gender" value="other" id="other"><label for="other">other</label>
+        <div id="error"></div>
+        </fieldset>
+        <section>
+        <input type="number" name="code" id="code" min="800" max="9729" placeholder="postcode"> <div class="error">Please enter a real code</div>
+        <div id="error"></div>
+        <label for="code">Post Code:</label>
+    </section>
+        <section id=state>
+        <label for="state">State:</label>
+            <select name="state" id="state">
+                <option value="NSW">NSW</option>
+                <option value="QLD">QLD</option>
+                <option value="SA">SA</option>
+                <option value="TAS">TAS</option>
+                <option value="VIC">VIC</option>
+                <option value="WA">WA</option>
+                <option value="ACT">ACT</option>
+                <option value="NT">NT</option>
+            </select>
+        <div id="error"></div>
+        </section>
+        <section>
+        <input type="submit" value="Submit">
+    </section>
+        </from>
+    </div>
+</body>
+</html>

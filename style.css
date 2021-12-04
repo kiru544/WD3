@@ -1,0 +1,271 @@
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+#page {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  background-color: skyblue;
+}
+
+h1 {
+  margin: 0 0 1em 1em;
+  font-size: 3em;
+}
+p {
+  margin: 0 0 1em 0;
+}
+a {
+  color: #007eff;
+}
+a:visited {
+  color: #65b1ff;
+}
+input[required] ~ label::before{
+  content: "*";
+  color: red;
+  
+}
+header {
+  height: 120px;
+  position: relative;
+  background-size: 1200px 120px;
+  background-color: blue;
+}
+header img {
+  height: 100px;
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  display: block;
+}
+header a.logo {
+  position: absolute;
+  display: block;
+  height: 120px;
+  left: 130px;
+  top: 50px;
+  font-size: 3em;
+}
+header a.logo2 {
+  position: absolute;
+  display: block;
+  height: 100px;
+  width: 100px;
+  top: 10px;
+  left: 10px;
+}
+header a.logo2 span {
+  display: none;
+}
+
+fieldset {
+  width: 30%;
+  margin-left: 34%;
+}
+fieldset input {
+  width: auto;
+  margin: 0;
+}
+fieldset label {
+  margin-left: 20px;
+}
+
+input:invalid:not(:placeholder-shown):required {
+  background-color: red;
+  opacity: 75%;
+}
+input input:optional {
+  border-color: gray;
+  opacity: 0.8;
+}
+input:invalid:required::placeholder {
+  color: black;
+}
+fieldset {
+  font-size: 1em;
+  background-color: khaki;
+  border-radius: 10px;
+}
+legend{
+  background-color: gold;
+  border-radius: 5px;
+}
+.error {
+  display: none;
+  margin-left: 37%;
+  content: "*";
+  color: red;
+}
+div{
+  margin: 0;
+}
+input:invalid:not(:placeholder-shown) ~ .error {
+  display:block;
+}
+section{
+  display: flex;
+  flex-direction: column-reverse;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+#state, #help{
+  flex-direction: row;
+}
+.nameicon{
+  display:inline-block;
+  position: relative;
+}
+.nameicon::after{
+  position: absolute;
+  top: 21px;
+  right:6px;
+  content: url(images/card-text.svg);
+}
+.dateicon{
+  display:inline-block;
+  position: relative;
+}
+.dateicon::after{
+  position: absolute;
+  top: 21px;
+  right:6px;
+  content: url(images/calendar.svg);
+}
+#help-video{
+  display: none;
+}
+#help-link:hover + #help-video, #help-video:hover{
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-color: gold;
+}
+@media screen and (max-width: 425px) {
+  body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  #page {
+    max-width: auto;
+    margin: 0 auto;
+    position: relative;
+    background-color: skyblue;
+  }
+
+  h1 {
+    margin: 0 0 1em 1em;
+    font-size: 2.8em;
+  }
+  p {
+    margin: 0 0 1em 0;
+  }
+  a {
+    color: #007eff;
+  }
+  a:visited {
+    color: #65b1ff;
+  }
+  header a.logo span {
+    display: block;
+    text-decoration: none;
+    font-size: 0.6em;
+  }
+  header {
+    height: 120px;
+    position: relative;
+    background-size: auto 0.4em;
+    background-color: blue;
+  }
+  img {
+    height: 100px;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    display: block;
+  }
+  header a.logo {
+    position: absolute;
+    display: block;
+    height: 120px;
+    left: 130px;
+    top: 50px;
+    font-size: 3em;
+  }
+  label {
+    margin-left: 0%;
+    display: none;
+  }
+  fieldset {
+    display: none;
+    width: auto;
+    margin-left: 0;
+  }
+  fieldset input {
+    width: auto;
+    margin: 0;
+  }
+  fieldset label {
+    margin-left: 0;
+  }
+  select {
+    margin-left: 0%;
+  }
+  input:invalid:not(:placeholder-shown):required {
+    background-color: red;
+    opacity: 75%;
+  }
+  input:optional {
+    border-color: gray;
+  }
+  input .sname::before {
+    background-color: blue;
+  }
+
+  form {
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .form-control {
+    display: none;
+  }
+  input{
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+  section{
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .nameicon{
+      display:inline-block;
+      position: relative;
+    }
+    .nameicon::after{
+      position: absolute;
+      top: 3px;
+      right:4px;
+      content: url(images/card-text.svg);
+    }
+    .dateicon{
+      display:inline-block;
+      position: relative;
+    }
+    .dateicon::after{
+      position: absolute;
+      top: 3px;
+      right:4px;
+      content: url(images/calendar.svg);
+    }
+    select{
+      width: 100%;
+    }
+  }
